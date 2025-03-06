@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  display: flex;
+  height: 100vh;
+}
+
+.parent .left-side {
+  position: relative;
+  /* top: 0; */
+  background: url("pic.avif") no-repeat center/cover;
+  flex: 1;
+}
+.parent .left-side .logo-name {
+  font-family: Rubik Beastly;
+  font-size: 50px;
+  font-weight: 200;
+  background: rgba(119, 117, 117, 0.5);
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 20vh;
+}
+
+.parent .right-side {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oleo Script", serif;
+}
+.parent .right-side .header {
+  background-color: rgba(218, 198, 174, 0.171);
+  padding: 10px 100px 10px 20px;
+}
+.parent .right-side .header .first-text {
+  width: 550px;
+}
+
+.parent .right-side .header .second-text {
+  margin-top: 12px;
+}
+
+.parent .right-side form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  background-color: rgba(243, 230, 214, 0.171);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+.parent .right-side form .col-one,
+.parent .right-side form .col-two {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-top: 10px;
+}
+input {
+  padding: 6px;
+  border-color: rgba(165, 150, 131, 0.171);
+  border-radius: 20px;
+  border-style: solid;
+}
+.parent .right-side form input:focus {
+  outline: none; /* Removes the default blue outline */
+  /* border-width: 2px; */
+}
+
+.parent .right-side form input:focus:invalid {
+  border: 2px solid rgb(214, 212, 106);
+  animation: shake 0.3s ease-in-out;
+}
+
+.parent .right-side form input:focus:valid {
+  border: 2px solid rgba(150, 221, 109, 0.884);
+  background: url("https://img.icons8.com/color/20/000000/checkmark.png")
+    no-repeat right 10px center;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.parent .right-side .container-button {
+  background-color: rgba(243, 230, 214, 0.171);
+  height: 100%;
+  padding: 10px 20px;
+}
+.parent .right-side .container-button button {
+  padding: 10px 20px;
+  border-color: rgba(165, 150, 131, 0.171);
+  background: rgba(202, 202, 202, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.parent .right-side .container-button p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.parent .right-side .container-button a {
+  color: #4f78b9;
+  text-decoration: none;
+}
+.parent .right-side .container-button button:hover {
+  background: rgba(119, 117, 117, 0.5);
+}
